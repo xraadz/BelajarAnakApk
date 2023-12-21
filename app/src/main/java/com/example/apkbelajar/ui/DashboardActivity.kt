@@ -36,10 +36,6 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
         btn_rumah.setOnClickListener(this)
         btn_youtube.setOnClickListener(this)
         imageButton.setOnClickListener(this)
-        //start soundtrack
-        startService(Intent(applicationContext, BackgroundServices::class.java))
-        audio = MediaPlayer.create(this, R.raw.home)
-        audio.start()
         //Alert Builder
         alertBuilder = AlertDialog.Builder(this)
         alertBuilder.setTitle("Anda sedang dalam game")

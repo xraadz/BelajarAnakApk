@@ -13,7 +13,6 @@ import com.example.apkbelajar.R
 class MainActivity : AppCompatActivity() {
 
     lateinit var handler: Handler
-    private lateinit var audio: MediaPlayer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,8 +33,6 @@ class MainActivity : AppCompatActivity() {
         image.animation = top_animation
         text1.animation = bot_animation
 
-        audio = MediaPlayer.create(this, R.raw.loading_screen)
-        audio.start()
 
         handler = Handler()
         handler.postDelayed({
