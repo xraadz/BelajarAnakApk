@@ -10,7 +10,6 @@ import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
 import com.example.apkbelajar.R
 import com.example.apkbelajar.ui.fragment.HomeFragment
-import com.example.apkbelajar.ui.fragment.YoutubeFragment
 import com.example.apkbelajar.utils.BackgroundServices
 import kotlinx.android.synthetic.main.activity_dashboard.*
 
@@ -34,8 +33,12 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
         }
         //Set OnClick Listener
         btn_rumah.setOnClickListener(this)
-        btn_youtube.setOnClickListener(this)
+        sumu.setOnClickListener(this)
         imageButton.setOnClickListener(this)
+        //start soundtrack
+        startService(Intent(applicationContext, BackgroundServices::class.java))
+        audio = MediaPlayer.create(this, R.raw.mari_belajar)
+        audio.start()
         //Alert Builder
         alertBuilder = AlertDialog.Builder(this)
         alertBuilder.setTitle("Anda sedang dalam game")
@@ -56,12 +59,6 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
                     .replace(R.id.container, HomeFragment.newInstance())
                     .commitNow()
             }
-            R.id.btn_youtube -> {
-                playSound()
-                supportFragmentManager.beginTransaction()
-                    .replace(R.id.container, YoutubeFragment.newInstance())
-                    .commitNow()
-            }
             R.id.imageButton -> {
                 playSound()
                 alertBuilder.setPositiveButton("Iya") { _, _ ->
@@ -80,7 +77,7 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
         super.onPause()
         audio.stop()
         if(firstRun)
-           firstRun = false
+            firstRun = false
         else
             audioResume.stop()
         val context: Context = applicationContext
@@ -104,7 +101,8 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
         }
         val mAlertDialog = alertBuilder.create()
         mAlertDialog.show()
-
+        audio.stop()
+        audioResume.stop()
     }
 
     override fun onResume() {
@@ -112,7 +110,7 @@ class DashboardActivity : AppCompatActivity(), View.OnClickListener {
         if (!flag)
             flag = true
         else {
-            audioResume = MediaPlayer.create(this, R.raw.pilih_permainan)
+            audioResume = MediaPlayer.create(this, R.raw.silahkan_pilih)
             audioResume.start()
         }
         startService(Intent(applicationContext, BackgroundServices::class.java))

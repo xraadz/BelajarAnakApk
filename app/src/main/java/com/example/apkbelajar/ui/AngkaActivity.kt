@@ -32,7 +32,7 @@ class AngkaActivity : AppCompatActivity(), View.OnClickListener {
         }
         //SetOnclick
         btn_rumah.setOnClickListener(this)
-        btn_youtube.setOnClickListener(this)
+        sumu.setOnClickListener(this)
         imageButton.setOnClickListener(this)
         //Session
         sessionManager = SessionManager(this)
@@ -75,7 +75,7 @@ class AngkaActivity : AppCompatActivity(), View.OnClickListener {
                     mAlertDialog.show()
                 }
             }
-            R.id.btn_youtube -> {
+            R.id.sumu -> {
                 playSound()
                 if (getInfoGame() == false) {
                     clearSession()

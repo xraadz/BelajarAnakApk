@@ -37,7 +37,7 @@ class WarnaHomeFragment : Fragment() {
         rv_warna.layoutManager = GridLayoutManager(view?.context, 2)
         val adapterWarna = AdapterWarna(list)
         rv_warna.adapter = adapterWarna
-        audio = MediaPlayer.create(view?.context, R.raw.tekan_warna)
+        audio = MediaPlayer.create(view?.context, R.raw.tekan_warna_dibawah)
         audio.start()
     }
 

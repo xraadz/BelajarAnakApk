@@ -41,8 +41,8 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/house" />
 
-        <ImageButton
-            android:id="@+id/btn_youtube"
+        <ImageView
+            android:id="@+id/sumu"
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:backgroundTint="@color/Putih"
@@ -51,7 +51,7 @@
             app:layout_constraintEnd_toStartOf="@+id/imageButton"
             app:layout_constraintStart_toEndOf="@id/btn_rumah"
             app:layout_constraintTop_toTopOf="parent"
-            app:srcCompat="@drawable/youtube" />
+            app:srcCompat="@drawable/sumu" />
 
         <ImageButton
             android:id="@+id/imageButton"

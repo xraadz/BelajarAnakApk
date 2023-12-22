@@ -1,5 +1,5 @@
 package com.example.apkbelajar.models
 
-data class Beruang(
+data class Belajar(
      var angka: Int = 0
 )

@@ -29,10 +29,6 @@
                 android:resource="@xml/file_paths" />
         </provider>
 
-        <activity android:name="com.example.apkbelajar.ui.SmartCameraActivity"></activity>
-        <activity
-            android:name="com.example.apkbelajar.ui.YoutubeActivity"
-            android:screenOrientation="landscape" />
         <activity android:name="com.example.apkbelajar.ui.HurufActivity" />
         <activity android:name="com.example.apkbelajar.ui.AngkaActivity" />
         <activity

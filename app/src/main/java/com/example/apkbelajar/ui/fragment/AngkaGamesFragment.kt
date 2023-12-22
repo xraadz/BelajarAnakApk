@@ -18,7 +18,7 @@ import androidx.recyclerview.widget.GridLayoutManager
 import com.example.apkbelajar.R
 import com.example.apkbelajar.adapter.AdapterAngkaGames
 import com.example.apkbelajar.data.AngkaGames
-import com.example.apkbelajar.models.Beruang
+import com.example.apkbelajar.models.Belajar
 import com.example.apkbelajar.ui.SummaryActivity
 import com.example.apkbelajar.utils.SessionManager
 import kotlinx.android.synthetic.main.fragment_angka_games.*
@@ -33,7 +33,7 @@ class AngkaGamesFragment : Fragment() {
     private var list: ArrayList<com.example.apkbelajar.models.AngkaGames> = arrayListOf()
     private var i = 0
     private var j = 0
-    private var listAngka: ArrayList<Beruang> = arrayListOf()
+    private var listAngka: ArrayList<Belajar> = arrayListOf()
     private var salah = 0
     private var countSalah = 0
     private var countBenar = 0
@@ -89,15 +89,15 @@ class AngkaGamesFragment : Fragment() {
     }
 
     private fun loadSoal(i: Int) {
-        audio = MediaPlayer.create(view?.context, R.raw.pertanyaan_jumlah_beruang)
+        audio = MediaPlayer.create(view?.context, R.raw.pertanyaan_jumlah_jempol)
         audio.start()
         //Membersihkan list
         listAngka.clear()
-        //Looping untuk membuat item jumlah beruang
+        //Looping untuk membuat item jumlah jempol
         for (a in 1..list[i].angkaNumber) {
-            val beruang = Beruang()
-            beruang.angka = list[i].angkaNumber
-            listAngka.add(beruang)
+            val belajar = Belajar()
+            belajar.angka = list[i].angkaNumber
+            listAngka.add(belajar)
         }
         //Load Item to recyclerView
         rv_beruang.layoutManager = GridLayoutManager(view?.context, 4)

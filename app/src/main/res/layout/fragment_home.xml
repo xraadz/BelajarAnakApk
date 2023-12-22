@@ -44,7 +44,7 @@
             android:layout_marginStart="33dp"
             android:layout_marginTop="40sp"
             android:fontFamily="@font/ceows"
-            android:text="@string/pilih_permainan_mu"
+            android:text="@string/silahkan_pilih"
             android:textColor="@color/hitam"
             android:textSize="15sp"
             android:textStyle="bold" />

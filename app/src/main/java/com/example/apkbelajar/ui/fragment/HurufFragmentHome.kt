@@ -46,7 +46,7 @@ class HurufFragmentHome : Fragment(), View.OnClickListener {
         img_abjad.setOnClickListener(this)
         //Load Item
         loadItem(i)
-        select = MediaPlayer.create(view?.context, R.raw.sentuh_panah)
+        select = MediaPlayer.create(view?.context, R.raw.huruf_panah)
         select.start()
     }
 

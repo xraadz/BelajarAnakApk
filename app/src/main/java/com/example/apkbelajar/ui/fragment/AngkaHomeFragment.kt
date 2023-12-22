@@ -76,7 +76,7 @@ class AngkaHomeFragment : Fragment() {
         btn_nine.setOnClickListener {
             showNumberInfo(R.drawable.nine, "Sembilan", R.raw.sembilan)
         }
-        ost =  MediaPlayer.create(view?.context, R.raw.tekan_angka)
+        ost =  MediaPlayer.create(view?.context, R.raw.tekan_angka_dibawah)
         ost.start()
     }
 

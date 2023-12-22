@@ -7,9 +7,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.apkbelajar.R
-import com.example.apkbelajar.models.Beruang
+import com.example.apkbelajar.models.Belajar
 
-class AdapterAngkaGames(val listAngka: ArrayList<Beruang>) :
+class AdapterAngkaGames(val listAngka: ArrayList<Belajar>) :
     RecyclerView.Adapter<AdapterAngkaGames.ViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {

@@ -15,7 +15,7 @@ import com.example.apkbelajar.ui.fragment.MissingAbjadGamesFragment
 import com.example.apkbelajar.utils.BackgroundServices
 import com.example.apkbelajar.utils.SessionManager
 import kotlinx.android.synthetic.main.activity_angka.btn_rumah
-import kotlinx.android.synthetic.main.activity_angka.btn_youtube
+import kotlinx.android.synthetic.main.activity_angka.sumu
 import kotlinx.android.synthetic.main.activity_huruf.*
 
 class HurufActivity : AppCompatActivity(), View.OnClickListener {
@@ -35,7 +35,7 @@ class HurufActivity : AppCompatActivity(), View.OnClickListener {
         }
         //SetOnclick
         btn_rumah.setOnClickListener(this)
-        btn_youtube.setOnClickListener(this)
+        sumu.setOnClickListener(this)
         btn_back.setOnClickListener(this)
         //Session
         sessionManager = SessionManager(this)
@@ -103,7 +103,7 @@ class HurufActivity : AppCompatActivity(), View.OnClickListener {
                     mAlertDialog.show()
                 }
             }
-            R.id.btn_youtube -> {
+            R.id.sumu -> {
                 playSound()
                 if (getInfoGame() == false) {
                     clearSession()
