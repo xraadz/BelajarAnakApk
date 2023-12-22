@@ -90,7 +90,7 @@ class MissingAbjadGamesFragment : Fragment() {
     }
 
     private fun loadSoal(i: Int) {
-        ost = MediaPlayer.create(view?.context, R.raw.missing_abjad)
+        ost = MediaPlayer.create(view?.context, R.raw.huruf_deret)
         ost.start()
         //Change Image Soal
         img_abjad1?.setImageResource(list[i].soal1)
