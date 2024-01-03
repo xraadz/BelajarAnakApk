@@ -28,7 +28,7 @@
         android:layout_marginTop="60dp"
         android:layout_toEndOf="@+id/img_rogo"
         android:fontFamily="@font/ceows"
-        android:text="Bermain \nAlphabhet"
+        android:text="Bermain \nAlfabet"
         android:textColor="@color/hitam"
         android:textSize="30sp"
         app:layout_constraintStart_toEndOf="@+id/img_rogo"
